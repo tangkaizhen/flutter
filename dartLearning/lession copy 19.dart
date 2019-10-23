@@ -10,5 +10,4 @@ main(){
    * 
    */
   print(getData<String>('我叫唐凯震'));
-
 }  

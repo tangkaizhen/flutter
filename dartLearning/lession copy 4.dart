@@ -17,7 +17,6 @@ main(){
   // var myNum=double.parse(str);
   print(myNum is int);
 
-
   /**
    * 如果对于一些可能出现bug的程序，可以使用try-catch来解决,抛出异常
    */

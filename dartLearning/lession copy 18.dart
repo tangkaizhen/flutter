@@ -23,5 +23,4 @@ main(){
 
   C c1=new C();
   c1.printB();
-
 }  
