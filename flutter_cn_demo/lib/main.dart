@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Demo.dart';
-// 尽量在Text外层套一层Container,Row,Column是基于flexbox设计的,Stack基于想对定位和绝对定位设计的
+// 尽量在Text外层套一层Container,Row,Column是基于flexbox设计的,使用之后元素在垂直和水平位置都会居中的,Stack基于想对定位和绝对定位设计的
 
 
 // 箭头函数，是flutter单行函数的简写
@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
   // build类似于react中的render方法，每次重新渲染视图时候，都会重新执行build
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title:'Flutter layout demo',

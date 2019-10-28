@@ -1,32 +1,25 @@
 import 'package:flutter/material.dart';
 
 class AppBarDemoPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('AppBarDemoPage'),
-        backgroundColor: Colors.green,
-        // 增加一个导航条左边的按钮
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: (){
-            print('menu');
-          }
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('AppBarDemoPage'),
+          centerTitle: true,
+          backgroundColor: Colors.green,
+          // 增加一个右边的按钮
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(text: '热门'),
+              Tab(text: '推荐')
+            ],
+          ),
         ),
-        
-        // 增加一个右边的按钮
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: (){
-              print('search');
-            },
-          )
-        ],
+        body: Text('data'),
       ),
-      body: Text('data'),
     );
   }
 }

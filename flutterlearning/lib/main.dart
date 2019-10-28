@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         //去掉debug图标 
         debugShowCheckedModeBanner: false,
-        initialRoute:'/superApp',
+        initialRoute:'/appBar',
         // 主要是用来路由传参
         onGenerateRoute:onGenerateRoute
         ); 
