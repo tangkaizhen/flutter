@@ -19,6 +19,7 @@ class MyAppBar extends StatelessWidget {
             tooltip: 'sdfv',
             onPressed: null,
           ),
+          // 这个类似于flex中自动扩充剩余的部分
           Expanded(
             child: title
           ),

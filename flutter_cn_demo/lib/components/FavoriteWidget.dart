@@ -8,20 +8,22 @@ class FavoriteWidget extends StatefulWidget {
 }
 
 class _FavoriteWidgetState extends State<FavoriteWidget> {
+  // 注意bool
   bool _isFavorited = true;
   int _favoriteCount = 41;
-
+  // 方法的申明是没有function的
   _toggleFavorite(){
     setState(() {
-     if(_isFavorited){
-      _favoriteCount -= 1;
-      _isFavorited = false;
-     }else{
-      _favoriteCount += 1;
-      _isFavorited = true;
-     } 
+      if(_isFavorited){
+        _favoriteCount -= 1;
+        _isFavorited = false;
+      }else{
+        _favoriteCount += 1;
+        _isFavorited = true;
+      } 
     });
   }
+  
   @override
   Widget build(BuildContext context) {
 

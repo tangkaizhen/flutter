@@ -10,7 +10,6 @@ main(){
   var set=new Set();
   set.addAll(list);
   print(set);
-
   var list1=set.toList();
   print(list1);
 

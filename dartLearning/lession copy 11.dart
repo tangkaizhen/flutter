@@ -17,7 +17,6 @@ main(){
    * 类(三大特性：封装，继承，多态)，对象
    * 类需要放到main函数外面
    */
-
   Person p=new Person('唐凯震',25);
   print(p.getInfo());
 

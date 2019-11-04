@@ -6,7 +6,6 @@ class TapboxA extends StatefulWidget {
   TapboxA({Key key}) : super(key: key);
 
   @override
-  
   _TapboxAState createState() => _TapboxAState();
 }
 

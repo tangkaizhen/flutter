@@ -1,35 +1,20 @@
 import 'package:flutter/material.dart';
+// 前后台交互，获取网络请求
+import 'package:http/http.dart' as http;
+import 'components/Post.dart';
+// 转换
+import 'dart:convert';
 
-class MyAppBar extends StatelessWidget {
-  final Widget title;
-  MyAppBar({this.title});
+// 触发http请求,Future是表示处理异步操作的核心的类
+Future<Post> fetchPost() async {
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 56,
-      padding: EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        color: Colors.blue
-      ),
-      child: Row(
-        children: <Widget>[
-          IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'sdfv',
-            onPressed: null,
-          ),
-          Expanded(
-            child: title
-          ),
-          IconButton(
-            icon: Icon(Icons.search),
-            tooltip: 'search',
-            onPressed: null,
-          ),
-        ],
-      ),
-    );
+  // http.get() 方法会返回一个包含 Response 的 Future
+  var response =await http.get('https://jsonplaceholder.typicode.com/posts/1');
+  if (response.statusCode == 200) {
+    return Post.fromJson(json.decode(response.body));
+  } else {
+    // If that response was not OK, throw an error.
+    throw Exception('Failed to load post');
   }
 }
 
@@ -41,23 +26,31 @@ class Demo extends StatefulWidget {
 }
 
 class _DemoState extends State<Demo> {
+  Future<Post> post;
 
-  int _count=0;
-  _increment(){
-    setState(() {
-      this._count++;
-    });
+  @override
+  void initState() {
+    super.initState();
+    post = fetchPost();
   }
+
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        RaisedButton(
-          onPressed: this._increment,
-          child: Text('Increment'),
-        ),
-        Text('Count:$_count')
-      ],
+    return Center(
+      // 这个由 Flutter 提供的 FutureBuilder 组件可以让处理异步数据源变的非常简单
+      child: FutureBuilder<Post>(
+            future: post,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Text(snapshot.data.title);
+              } else if (snapshot.hasError) {
+                return Text("${snapshot.error}");
+              }
+              // By default, show a loading spinner.
+              return CircularProgressIndicator();
+            },
+          )
     );
   }
+
 }

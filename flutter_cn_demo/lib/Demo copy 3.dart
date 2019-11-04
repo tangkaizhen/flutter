@@ -32,7 +32,7 @@ class _DemoState extends State<Demo> {
               // 可以多个boxShadow叠加
               BoxShadow(
                 color: Colors.red,
-                // 便宜量
+                // 偏移量
                 offset: Offset(0, 2),
                 // 模糊距离
                 blurRadius: 10

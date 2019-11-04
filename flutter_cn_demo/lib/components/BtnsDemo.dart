@@ -39,7 +39,7 @@ class _BtnsDemoState extends State<BtnsDemo> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          _buildButtonColumn(Colors.green,Icons.call,'CALL'),
+          _buildButtonColumn(Colors.green,Icons.call,'call'),
           _buildButtonColumn(Colors.green,Icons.near_me,'near_me'),
           _buildButtonColumn(Colors.green,Icons.share,'share')
         ],

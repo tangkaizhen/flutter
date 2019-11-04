@@ -14,12 +14,10 @@
 
 // 表示没有返回值
 void main(){
-
   var arr=new List();
   arr.add('张三');
   arr.add('张四');
   arr.add('张五');
   arr.add('张六');
-
   print(arr);
 }

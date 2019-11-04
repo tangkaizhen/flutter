@@ -22,6 +22,7 @@ class _DemoState extends State<Demo> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        // 会自动占满宽度
         child: ListView(
           children: <Widget>[
             Image.network(

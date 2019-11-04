@@ -8,7 +8,7 @@ main(){
    *    isNotEmpty:是否不为空
    *    reversed:数组翻转
    * 
-   * List方法：
+   * List方法： 
    *    add：增加元素,增加一个
    *    addAll:增加元素,增加多个，传入的是一个数组（主要的功能是拼接数组）
    *    indexOf：查找某个元素的索引
