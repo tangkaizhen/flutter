@@ -1,15 +1,15 @@
 main(){
 
 /**
- * 1,number和String类型之间的转换
+ * dart中也是支持条件表达式 ?:
+ * dart中条件判断和循环语句和js是一样的
+ * ??  相当于js中的||，如果前面为空，则会采用备用的值
  * 
+ * number和String类型之间的转换
  * number=>String  toString()
- * String=>number parse()
+ * String=>number parse()  以后不管是转换成整形还是浮点型，均用double
  * 
- * 2,其他类型转换成Boolean
  * isEmpty:判断字符串是否为空
- * 
- * isNAN
  */
 
   String str='123';
@@ -22,6 +22,7 @@ main(){
    */
 
   String price='';
+
   try{
     var myNum=double.parse(price);
     print(myNum);
@@ -29,8 +30,11 @@ main(){
     print(0);
   }
 
-
-
+  // 判断一个变量是否为空
+  var num1;
+  if(num1==null){
+    print('空');
+  }
 
 
 

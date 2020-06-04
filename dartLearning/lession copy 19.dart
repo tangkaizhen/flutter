@@ -5,9 +5,11 @@ T getData<T>(T data){
 
 
 main(){
+
   /**
    * 泛型，可以解决代码重用和不特定的类型校验的问题
-   * 
    */
+  
   print(getData<String>('我叫唐凯震'));
+  
 }  

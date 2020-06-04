@@ -1,5 +1,6 @@
 main(){
 /**
+ * 
  * 循环遍历List，Set，Map
  * 
  * for-in
@@ -11,7 +12,14 @@ main(){
  * 
 */  
 
+var myList=['q','a','d'];
+for(var item in myList){
+  // print(item);
+}
 
+myList.forEach((value){
+  print('$value');
+});
 
 
 

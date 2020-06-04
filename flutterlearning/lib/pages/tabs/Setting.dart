@@ -7,27 +7,24 @@ class SettingPage extends StatefulWidget {
 }
 
 class _SettingPageState extends State<SettingPage> {
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        ListTile(
-          title: Text('设置大标题'),
-          subtitle: Text('设置小标题')
+    return Column(
+      children:<Widget>[
+        RaisedButton(
+          onPressed: (){
+            Navigator.pushNamed(context, '/login');
+          },
+          child:Text('跳转到登录界面')
         ),
-        ListTile(
-          title: Text('设置大标题'),
-          subtitle: Text('设置小标题')
-        ),
-        ListTile(
-          title: Text('设置大标题'),
-          subtitle: Text('设置小标题')
-        ),
-        ListTile(
-          title: Text('设置大标题'),
-          subtitle: Text('设置小标题')
+        RaisedButton(
+          onPressed: (){
+            Navigator.pushNamed(context, '/register1');
+          },
+          child:Text('跳转到注册界面')
         )
-      ],
+      ]
     );
   }
 }
